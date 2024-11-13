@@ -2,33 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESC Hacker Escape Rooms</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Hacker escape room</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
-
 <body>
 
     <!-- Header Section -->
     <div class="header">
-        <img src="logo.png" alt="ESC Hacker Escape Rooms Logo" style="height: 60px;">
+        <img src="logo.png" alt="ESC Hacker Escape Rooms Logo" class="header-logo">
         <h1>Hacker Escape Rooms</h1>
-        <div class="header">
+    </div>
 
             <!-- Main Image Section -->
-        </div class="main-image">
+            <div class="main-image">
         <img src="main-image.png" alt="Escape Room Main Image" style="height: 60px;">>
-    </div class="main-image">
+    </div>
 
     <!-- Button Section -->
-    <div class="buttons top">
-        <button>On-site challenges</button>
-        <button>online challenges</button>
-        <div class="buttons top">
+    <div class="button-group">
+        <button class="primary-button_on-site">On-site challenges</button>
+        <button class="primary-button_online">Online challenges</button>
+    </div>
 
             <!-- review Section -->
-            <div>
-                <img src="user-avatar.png" alt="User Avatar" style="width: 50px; height: 50px; border-radius: 50%;">
+            <div class="review">
+                <img src="user-avatar.png" alt="User Avatar" class="review-avatar">
                 <p><em>"This is a quote about how amazing this place is and how much fun me and my friends had when we
                         tried it."</em></p>
                 <p>John Doe, visited us in September 2021</p>
@@ -36,26 +37,29 @@
 
             <h2>Popular challenges right now</h2>
             <!-- Challenges Section -->
-            <div>
-                <div>
-                    <img src="main-image.png" alt="Escape Room Main Image" style="height: 60px;">
-                    <p><strong>Title of room (on-site)</strong></p>
+            <div class="challenges">
+                <div class="challenge-card">
+                    <img src="main-image.png" alt="Escape Room Main Image" class="challenge-image">
+                    <p>Title of room (on-site)</p>
+                    <div class="stars">
                     <img src="star_full.png" alt="one star full"> <img src="star_full.png" alt="one star full"> <img
                     src="star_full.png" alt="one star full"> <img src="star_full.png" alt="one star full"> <img
                     src="Star_empty.png" alt="empty star">
+                    </div>
 
                     <p>2-6 participants</p>
-                    <button>Book this room</button>
+                    <button class="secondary-button">Book this room</button>
                 </div>
-                <div>
-                    <img src="main-image.png" alt="Escape Room Main Image" style="height: 60px;">
-                    <p><strong>Title of room (on-site)</strong></p>
+                <div class="challenge-card">
+                    <img src="main-image.png" alt="Escape Room Main Image" class="challenge-image">
+                    <p>Title of room (on-site)</p>
+                    <div class="stars">
                     <img src="star_full.png" alt="one star full"> <img src="star_full.png" alt="one star full"> <img
                         src="star_full.png" alt="one star full"> <img src="star_full.png" alt="one star full"> <img
                         src="Star_empty.png" alt="empty star">
-
+                    </div>
                     <p>2-6 participants</p>
-                    <button>Book this room</button>
+                    <button class="secondary-button">Book this room</button>
                 </div>
             </div>
 
@@ -63,19 +67,19 @@
                 <button>On-site challenges</button>
             </div>
             <!-- Story Section -->
-            <div>
+            <div class="story">
                 <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec
                     quoque vos omnino desit illud quo solo felicitas libertatisque perficiuntur.</p>
-                <button>Read the full story</button>
+                    <button class="primary-button_fullstory">Read the full story</button>
             </div>
 
             <!-- info Section -->
-            <div>
-                <img src="main-image.png" alt="Escape Room Main Image" style="height: 60px;">>
+            <div class="info-section">
+                <img src="main-image.png" alt="Escape Room Main Image"class="info-image">
                 <h2>Play with your friends or build your team stronger at work</h2>
                 <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil invitam. Nemo nocere tibi
                     erit, et non inimicos, et</p>
-                <button>Book on-site today</button>
+                    <button class="book_on_site_today_button">Book on-site today</button>
             </div>
 
             <div>
@@ -87,12 +91,12 @@
             </div>
 
             <!-- Footer Section -->
-            <div>
+            <div class="footer">
                 <p><strong>ESC Hacker Escape Rooms</strong></p>
                 <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec
                     quoque vos omnino desit illud quo solo felicitas libertatisque perficiuntur.</p>
 
-                <ul>
+                    <ul class="footer-links">
                     <p>Site map
                         <li>The Story</li>
                         <li>Contact Us</li>
@@ -103,7 +107,7 @@
 
                     </p>
                 </ul>
-                <ul>
+                <ul class="footer-social">
                     <p>Follow us on
                         <li>Facebook</li>
                         <li>Instagram</li>
@@ -114,5 +118,7 @@
         </div>
 
 </body>
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 </html>
