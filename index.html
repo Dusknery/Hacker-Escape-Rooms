@@ -5,48 +5,73 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Hacker escape room</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="description" content="Unlock the ultimate hacker escape room experience! Test your skills with immersive online and onsite challenges. Book your adventure today!">
+    <meta name="keywords" content="hacker escape rooms, immersive escape games, online escape rooms, team-building activities, onsite challenges">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
+
 <body>
 
     <!-- Header Section -->
-    <div class="header">
-        <img src="logo.png" alt="ESC Hacker Escape Rooms Logo" class="header-logo">
-        <h1>Hacker Escape Rooms</h1>
-    </div>
+    <header class="header">
+        <div class="header_top-area">
+          <!-- logo img -->
+            <div class="header_logo">
+              <img class="header_logo-img" src="logo.png" alt="ESC logo">
+            </div>
+            <!-- title -->
+            <div class="header_top-area_left-title">
+              <h1>Hacker Escape Rooms</h1>
+            </div>
+          </div>
+      </header>
 
             <!-- Main Image Section -->
-            <div class="main-image">
-        <img src="main-image.png" alt="Escape Room Main Image" style="height: 60px;">>
-    </div>
+            <main class="main">
+                <div class="main_top-area">
+                  <div class="main_image">
+                    <img class="main-image-img" src="main-image.png" alt="Hacker solving a coding problem to escape the room">
+                  </div>
+                </div>
 
     <!-- Button Section -->
-    <div class="button-group">
-        <button class="primary-button_on-site">On-site challenges</button>
-        <button class="primary-button_online">Online challenges</button>
-    </div>
+    <div class="main_btns">
+          <div class="main_btns-item">
+            <a href="#onsite-challenges" class="main_btn onsite">On-site challenges</a>
+          </div>
+          <div class="main_btns-item">
+            <a href="#online-challenges" class="main_btn online">Online challenges</a>
+          </div>
+        </div>
 
             <!-- review Section -->
-            <div class="review">
-                <img src="user-avatar.png" alt="User Avatar" class="review-avatar">
-                <p><em>"This is a quote about how amazing this place is and how much fun me and my friends had when we
-                        tried it."</em></p>
-                <p>John Doe, visited us in September 2021</p>
-            </div>
+            <div class="reviews">
+                <div class="review">
+                  <img src="user-avatar.png" alt="User Avatar" class="review-avatar">
+                  <p><em>"This is a quote about how amazing this place is and how much fun me and my friends had when we tried it."</em></p>
+                  <p>John Doe, visited us in September 2021</p>
+                </div>
+        
+                <div class="review">
+                  <img src="user-avatar.png" alt="User Avatar" class="review-avatar">
+                  <p><em>"Another testimonial about how fun the challenges were and how we couldn’t stop talking about it after the experience."</em></p>
+                  <p>Jane Doe, visited us in October 2022</p>
+                </div>
+              </div>
 
-            <h2>Popular challenges right now</h2>
             <!-- Challenges Section -->
             <div class="challenges">
                 <div class="challenge-card">
                     <img src="main-image.png" alt="Escape Room Main Image" class="challenge-image">
                     <p>Title of room (on-site)</p>
                     <div class="stars">
-                    <img src="star_full.png" alt="one star full"> <img src="star_full.png" alt="one star full"> <img
-                    src="star_full.png" alt="one star full"> <img src="star_full.png" alt="one star full"> <img
-                    src="Star_empty.png" alt="empty star">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_empty.png" alt="empty star">
                     </div>
-
                     <p>2-6 participants</p>
                     <button class="secondary-button">Book this room</button>
                 </div>
@@ -54,28 +79,52 @@
                     <img src="main-image.png" alt="Escape Room Main Image" class="challenge-image">
                     <p>Title of room (on-site)</p>
                     <div class="stars">
-                    <img src="star_full.png" alt="one star full"> <img src="star_full.png" alt="one star full"> <img
-                        src="star_full.png" alt="one star full"> <img src="star_full.png" alt="one star full"> <img
-                        src="Star_empty.png" alt="empty star">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_empty.png" alt="empty star">
+                    </div>
+                    <p>2-6 participants</p>
+                    <button class="secondary-button">Book this room</button>
+                </div>
+                <div class="challenge-card">
+                    <img src="main-image.png" alt="Escape Room Main Image" class="challenge-image">
+                    <p>Title of room (on-site)</p>
+                    <div class="stars">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_full.png" alt="one star full">
+                        <img src="star_empty.png" alt="empty star">
                     </div>
                     <p>2-6 participants</p>
                     <button class="secondary-button">Book this room</button>
                 </div>
             </div>
 
+            </div>
+    
             <div>
                 <button>On-site challenges</button>
             </div>
+    
             <!-- Story Section -->
-            <div class="story">
-                <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec
-                    quoque vos omnino desit illud quo solo felicitas libertatisque perficiuntur.</p>
-                    <button class="primary-button_fullstory">Read the full story</button>
-            </div>
+            <section class="story">
+                <div class="story_container">
+                    <h2 class="story_intro">
+                        Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec quoque vos omnino desit illud quo solo felicitas libertatisque perficiuntur.
+                    </h2>
+                    <p class="story_description">
+                        Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil invitam. Nemo nocere tibi erit, et non inimicos, et.
+                    </p>
+                    <a href="#full-story" class="story_btn">Read the full story</a>
+                </div>
+            </section>
 
             <!-- info Section -->
             <div class="info-section">
-                <img src="main-image.png" alt="Escape Room Main Image"class="info-image">
+                <img src="nesa-by-makers-IgUR1iX0mqM-unsplash 1.png" alt="Escape Room Main Image"class="info-image">
                 <h2>Play with your friends or build your team stronger at work</h2>
                 <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil invitam. Nemo nocere tibi
                     erit, et non inimicos, et</p>
@@ -83,42 +132,49 @@
             </div>
 
             <div>
-                <img src="main-image.png" alt="Escape Room Main Image" style="height: 60px;">>
+                <img src="kelly-sikkema-YK0HPwWDJ1I-unsplash 1.png" alt="Escape Room Main Image">
                 <h2>Play online or visit our venue for one of our 25 escape rooms</h2>
                 <p>Praeterea, ex culpa non invenies unum aut non accusatis unum. Et nihil invitam. Nemo nocere tibi
                     erit, et non inimicos, et</p>
-                <button>See all challenges</button>
+                    <button class="see_all_the_challenges_button">See all the challenges</button>
             </div>
 
             <!-- Footer Section -->
-            <div class="footer">
-                <p><strong>ESC Hacker Escape Rooms</strong></p>
-                <p>Quodsi haberent magnalia inter potentiam et divitias, et non illam quidem haec eo spectant haec
-                    quoque vos omnino desit illud quo solo felicitas libertatisque perficiuntur.</p>
-
-                    <ul class="footer-links">
-                    <p>Site map
-                        <li>The Story</li>
-                        <li>Contact Us</li>
-                        <li>Legal</li>
-
-                        <li>Play online</li>
-                        <li>Play on-site</li>
-
-                    </p>
-                </ul>
-                <ul class="footer-social">
-                    <p>Follow us on
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                        <li>Twitter</li>
-                    </p>
-                </ul>
-            </div>
+      <footer class="footer">
+        <div class="footer_content">
+          <section class="footer_about item1">
+            <h2 class="footer_title">[Esc] Hacker Escape Rooms</h1>
+            <p class="footer_text">
+              Quodsi haberent magnalia inter potentiam et divitias, et non illam
+              quidem haec eo spectant haec quoque vos omnino desit illud quo
+              solo felicitatis libertatisque perficiuntur.
+            </p>
+          </section>
+          <section class="footer_site-map item2">
+            <h2 class="footer_item big">Site map</li>
+            <ul class="footer_list">
+              <li class="footer_item">The Story</li>
+              <li class="footer_item">Contact Us</li>
+              <li class="footer_item">Legal</li>
+            </ul>
+            <ul class="footer_list">
+              <li class="footer_item">Play online</li>
+              <li class="footer_item">Play on-site</li>
+            </ul>
+          </section>
+            
+          </section>
+          <section class="footer_social item3">
+            <h2 class="footer_item big">Follow us on</h2>
+            <ul class="footer_list">
+              <li class="footer_item">Facebook</li>
+              <li class="footer_item">Twitter</li>
+              <li class="footer_item">Instagram</li>
+            </ul>
+          </section>
         </div>
-
-</body>
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-</html>
+      </footer>
+    </main>
+  </body>
+  </html>
+  

@@ -1,0 +1,311 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* Header Section */
+.header {
+    background-color: #011827;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header_top-area {
+  display: flex;
+  align-items: center;
+}
+
+.header_logo-img {
+    max-height: 50px;
+
+  }
+
+  .header_top-area_left-title {
+font-size: 1.5rem;
+color: #fff;
+margin-left: 15px;
+  }
+
+/* Mobile Header Styling */
+@media (max-width: 768px) {
+  .header_top-area {
+      flex-direction: row; /* Ensure logo and title stay in row on small screens */
+      justify-content: flex-start; /* Align both to the left */
+  }
+}
+
+/* Main Section */
+.main {
+    width: 100%;
+    display: block;
+    overflow: visible;
+}
+
+/* Button styles */
+.main_btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1rem;
+    
+  }
+  
+  .online {
+    background-color: #e3170a;
+    color: #fff;
+  }
+  
+  .onsite {
+    background-color: #8acfe5;
+    color: #ffffff;
+  }
+  
+  .story_btn {
+    /* background-color: #011827; */
+    background-color: #fff;
+    color: #c7a9ee;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .see_all_the_challenges_button {
+    background-color: #e3170a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+  }
+  
+  .secondary-button {
+    background-color: #e3170a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .secondary-button:hover {
+    background-color: #d00c00;
+    
+  }
+  .info-section button {
+    background-color: #e3170a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+/* Review Section */
+.reviews {
+    display: flex;
+    flex-direction:row;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+/* Individual Review */
+.review {
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  flex: 0 0 auto; 
+  width: 280px; 
+}
+
+/* Show only one review on mobile */
+@media (max-width: 768px) {
+  .reviews {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      padding: 1rem;
+      width: 100%; 
+      justify-content: center;
+      align-items: center;
+  }
+
+  /* Show only one review */
+  .review {
+      display: none;
+  }
+
+  /* Show the first review */
+  .review:first-child {
+      display: block; 
+  }
+}
+  
+  .review-avatar {
+    max-width: 80px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Challenge cards */
+  .challenges {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    width:100%;
+  }
+  
+  /* Horizontal layout for small screens */
+@media (max-width: 768px) {
+  .challenges {
+    display: flex; 
+    flex-direction: row; 
+    overflow-x: auto; 
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .challenge-card {
+    background-color: #ffffff;
+    border: 1px solid #b6bdb5;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    flex: 0 0 auto;
+    width: 280px;
+  }
+  
+  .challenge-image {
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .challenge-card p {
+    color: #b6bdb5;
+  }
+  
+  
+  /* Story Section */
+  .story_container {
+    background-color: #011827;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .story_intro {
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  .story_description {
+    color: #b6bdb5;
+    font-size: 1rem;
+  }
+  
+  /* Info Section */
+  .info-section {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .info-image {
+    margin-bottom: 1rem;
+  }
+  
+
+/* Footer Section */
+.footer {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer_about,
+.footer_site-map,
+.footer_social {
+    width: 30%;
+}
+
+.footer_title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer_list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_item {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+}
+
+.footer_social ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 869px) {
+    .header_top-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header_logo-img {
+        width: 80px;
+    }
+
+    .main_btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .testimonials__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .challenges {
+        flex-direction: column;
+        align-items: center;
+    } */
+
+    .footer_content {
+        flex-direction: column;
+        align-items: left;
+    }
+}
+
