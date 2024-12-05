@@ -128,7 +128,7 @@ img {
 
 }
 
-.info-section button {
+.book_on_site_today_button{
   background-color: #e3170a;
   color: #fff;
   border: none;
@@ -243,20 +243,20 @@ img {
     font-size: 1rem;
   }
 
-  /* Info Section */
-  .info-section {
-    padding: 1rem;
+  /* Info Section 1 */
+  .info-section_1 {
+    text-align: center;
+    
+  }
+  /* Info Section 2 */
+  .info-section_2 {
     text-align: center;
   }
 
-  .info-image {
-    margin-bottom: 1rem;
-  }
-
-
   /* Footer Section */
   .footer {
-    background-color: #1a1a1a;
+    background-color: #011827;
+
     color: white;
     padding: 40px 20px;
   }
@@ -265,6 +265,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    font-size: 1rem;
   }
 
   .footer_about,
@@ -274,28 +275,60 @@ img {
   }
 
   .footer_title {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 15px;
+  }
+
+.footer_text{
+     font-size: 1rem;
+    margin-bottom: 40px;
+  }
+}
+
+  .footer_list_contact {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: lighter;
     margin-bottom: 20px;
   }
 
-  .footer_list {
-    list-style: none;
-    padding: 0;
-  }
-
-  .footer_item {
-    font-size: 1.125rem;
+  .footer_item_site_map {
+    font-size: 1rem;
+    font-weight:600;
     margin-bottom: 10px;
   }
 
-  .footer_social ul {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+  .footer_list_play {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-bottom: 40px;
   }
 
+  .footer_item {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+ 
   .footer_content {
     flex-direction: column;
     align-items: left;
   }
+
+  .footer_item_follow {
+    font-size: 1rem;
+    font-weight:600;
+    margin-bottom: 10px;
+}
+
+.footer_list_social{
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: lighter;
+
+  
 }
