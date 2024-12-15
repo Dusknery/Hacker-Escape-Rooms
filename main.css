@@ -48,13 +48,28 @@ img {
 }
 
 @media (max-width: 768px) {
-  .header_logo-img {}
-
+.header{
+  min-height: 110px;
+}
   .header_top-area_left-title {
     text-align: center;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+    margin-bottom: 2px;
+    word-spacing: 100%;
+    display: table-caption;
+    width: min-content;
+    font-weight: lighter;
+    margin-left: 8px;
   }
 
+.header_logo-img {
+  min-width: auto;
+  min-height: 75px;
+}
+.main-image-img {
+min-height: 230px;
+width: auto;
+}
 }
 
 /* Main Section */
@@ -73,6 +88,8 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
+  width: 220px;
+  height: 50px;
 
 }
 
@@ -84,6 +101,7 @@ img {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  margin-top: 85px;
 }
 
 .onsite {
@@ -94,21 +112,68 @@ img {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  margin-top: 45px;
 }
+.after_btn {
+  display: inline-flex; 
+  justify-content: center; 
+  align-items: center;
+  padding: 1rem; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 220px;
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .online {
+    background: transparent;
+    color: #9178fd;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 105px;
+    font-size: 0.75rem;
+  }
+  
+  .onsite {
+    background-color: #8acfe5;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    min-width: 260px;;
+    min-height: 55px;
+  }
+}
+
 .story_btn {
-  /* background-color: #011827; */
-  background-color: #fff;
-  color: #c7a9ee;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
+  display: inline-block;
+  padding: 16px 40px;
+  color: #74c6e5; 
+  font-size: 20px; 
+  font-weight: bold; 
+  text-decoration: none;
+  border: 2px solid #74c6e5; 
+  border-radius:3px; 
+  text-align: center; 
+  cursor: pointer; 
+  background: none; 
+  margin-bottom: 60px;
 }
 
 .see_all_the_challenges_button {
   background-color: #e3170a;
   color: #fff;
-  border: none;
+  border: none; 
   padding: 0.8rem 1.5rem;
   border-radius: 5px;
   cursor: pointer;
@@ -143,6 +208,7 @@ img {
   flex-direction: row;
   gap: 1rem;
   padding: 1rem;
+  margin-top: 100px;
 }
 
 /* Individual Review */
@@ -151,39 +217,42 @@ img {
   border: 1px solid #ffffff;
   padding: 1rem;
   border-radius: 8px;
-  text-align: center;
-  flex: 0 0 auto;
   width: 280px;
+ display: flex;
+ flex-direction: row;
+ align-items: flex-start;
+}
+
+.review-avatar {
+  width: 50px; 
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem; 
+}
+
+/* Review Text */
+.review_text {
+  flex: 1; 
 }
 
 /* Show only one review on mobile */
 @media (max-width: 768px) {
-  .reviews {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    padding: 1rem;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
 
   /* Show only one review */
   .review {
     display: none;
   }
 
-  /* Show the first review */
-  .review:first-child {
-    display: block;
-  }
+ /* Show the first review */
+ .review:first-child {
+  display: block;
 }
+}
+/* popular chalenges text */
+.popular{
+  text-align: center;
+  font-size: 1.5rem;
 
-.review-avatar {
-  max-width: 80px;
-  border-radius: 50%;
-  margin-bottom: 0.5rem;
-  left: auto;
 }
 
 /* Challenge cards */
@@ -194,6 +263,7 @@ img {
   gap: 1rem;
   padding: 1rem;
   width: 100%;
+  border-radius: 6px;
 }
 
 /* Horizontal layout for small screens */
@@ -206,14 +276,21 @@ img {
     padding: 1rem;
   }
 
+  .challenge-image {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    
+  }
+
   .challenge-card {
     background-color: #ffffff;
-    border: 1px solid #b6bdb5;
-    padding: 1rem;
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     text-align: center;
     flex: 0 0 auto;
     width: 280px;
+    border-radius: 6px;
   }
 
   .challenge-image {
@@ -221,12 +298,12 @@ img {
     margin-bottom: 0.5rem;
   }
 
-  .challenge-card p {
-    color: #b6bdb5;
-  }
-
 
   /* Story Section */
+  .story{
+    margin-top: 150px;
+  }
+
   .story_container {
     background-color: #011827;
     text-align: center;
@@ -235,19 +312,30 @@ img {
 
   .story_intro {
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.55rem;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    font-weight: 100;
   }
 
   .story_description {
     color: #b6bdb5;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
+
+.info-image {
+  object-fit: contain;
+  margin-bottom: 20px;
+}
 
   /* Info Section 1 */
   .info-section_1 {
     text-align: center;
-    
   }
+.section1 {
+  text-align: start;
+}
+
   /* Info Section 2 */
   .info-section_2 {
     text-align: center;
