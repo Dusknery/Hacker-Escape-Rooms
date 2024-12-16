@@ -24,6 +24,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  min-height: 110px;
 }
 
 .header_top-area {
@@ -32,19 +33,38 @@ img {
   overflow: hidden;
 }
 
-.header_logo-img {
-  max-height: 50px;
+  .header_logo-img {
+    min-width: auto;
+    max-height: 80px;
   flex-shrink: 0;
 
 }
 
 .header_top-area_left-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
   margin-left: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: calc(100% - 60px);
+  margin-bottom: -30px;
+}
+
+
+@media (min-width: 768px) {
+.main-image-img {
+  width:100%;
+  height:auto;
+  max-height:450px;
+  min-height: 300px;
+  object-fit: cover;
+}
+.challenges {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
 }
 
 @media (max-width: 768px) {
@@ -66,10 +86,7 @@ img {
   min-width: auto;
   min-height: 75px;
 }
-.main-image-img {
-min-height: 230px;
-width: auto;
-}
+
 }
 
 /* Main Section */
@@ -97,36 +114,39 @@ width: auto;
   background-color: #e3170a;
   color: #fff;
   padding: 0.8rem 1.5rem;
-  border-radius: 5px;
+  border-radius: 2px;
   font-weight: bold;
   border: none;
   cursor: pointer;
-  margin-top: 85px;
+  text-decoration: none;
+  margin-left: -115px;
 }
 
 .onsite {
   background-color: #8acfe5;
   color: #000;
   padding: 0.8rem 1.5rem;
-  border-radius: 5px;
+  border-radius:2px;
   font-weight: bold;
   border: none;
   cursor: pointer;
-  margin-top: 45px;
-}
-.after_btn {
-  display: inline-flex; 
-  justify-content: center; 
-  align-items: center;
-  padding: 1rem; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  width: 220px;
-  height: 50px;
+  text-decoration: none;
+  margin-left:115px;
 }
 
-@media (max-width: 768px) {
+  .main_btn {
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 1rem; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 220px;
+    height: 50px;
+  }
+
+  @media (max-width: 768px) {
   .online {
     background: transparent;
     color: #9178fd;
@@ -137,6 +157,8 @@ width: auto;
     cursor: pointer;
     margin-top: 105px;
     font-size: 0.75rem;
+    margin-left:0px;
+    text-decoration: underline;
   }
   
   .onsite {
@@ -152,6 +174,19 @@ width: auto;
     text-decoration: none;
     min-width: 260px;;
     min-height: 55px;
+    margin-left:0px;
+  }
+  .after_btn {
+    display: inline-flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 1rem; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 220px;
+    height: 50px;
+    
   }
 }
 
@@ -173,10 +208,18 @@ width: auto;
 .see_all_the_challenges_button {
   background-color: #e3170a;
   color: #fff;
-  border: none; 
+  border: none;
   padding: 0.8rem 1.5rem;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
 }
 
 .secondary-button {
@@ -184,8 +227,10 @@ width: auto;
   color: #fff;
   border: none;
   padding: 0.8rem 1.2rem;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
+  margin: 20px;
+  margin-left: 130px;
 }
 
 .secondary-button:hover {
@@ -198,17 +243,28 @@ width: auto;
   color: #fff;
   border: none;
   padding: 0.8rem 1.5rem;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
 }
 
 /* Review Section */
 .reviews {
   display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  padding: 1rem;
   margin-top: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.date {
+  font-size: 0.85rem;
 }
 
 /* Individual Review */
@@ -217,10 +273,9 @@ width: auto;
   border: 1px solid #ffffff;
   padding: 1rem;
   border-radius: 8px;
-  width: 280px;
+  width: 350px;
  display: flex;
- flex-direction: row;
- align-items: flex-start;
+
 }
 
 .review-avatar {
@@ -230,29 +285,25 @@ width: auto;
   margin-right: 1rem; 
 }
 
-/* Review Text */
-.review_text {
-  flex: 1; 
-}
-
-/* Show only one review on mobile */
 @media (max-width: 768px) {
-
-  /* Show only one review */
   .review {
     display: none;
   }
-
- /* Show the first review */
  .review:first-child {
-  display: block;
+  display: flex;
 }
+.reviews {
+  margin-top: 150px;
+  margin-bottom: 60px;
 }
+
+
+}
+
 /* popular chalenges text */
 .popular{
   text-align: center;
   font-size: 1.5rem;
-
 }
 
 /* Challenge cards */
@@ -264,6 +315,36 @@ width: auto;
   padding: 1rem;
   width: 100%;
   border-radius: 6px;
+}
+
+
+.challenge-card {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  text-align: start;
+  flex: 0 0 auto;
+  width: 280px;
+  border-radius: 6px;
+  font-weight: 200;
+}
+
+.challenge-card h5 {
+ float: right;
+ margin-top: -36px;
+ margin-right: 10px;
+ font-size: 0.7rem;
+}
+.challenge-card h3 {
+  margin-left: 20px;
+}
+.challenge-card p {
+margin: 20px;
+ }
+.stars {
+  margin-left:20px;
+  margin-bottom: 20px;
 }
 
 /* Horizontal layout for small screens */
@@ -280,17 +361,6 @@ width: auto;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
     
-  }
-
-  .challenge-card {
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    text-align: center;
-    flex: 0 0 auto;
-    width: 280px;
-    border-radius: 6px;
   }
 
   .challenge-image {
@@ -329,22 +399,30 @@ width: auto;
 }
 
   /* Info Section 1 */
-  .info-section_1 {
-    text-align: center;
+  .info-section_1 h2 {
+  margin-left: 20px;
   }
+  .info-section_1 p {
+    margin: 20px;
+    }
+
 .section1 {
   text-align: start;
 }
 
   /* Info Section 2 */
-  .info-section_2 {
-    text-align: center;
+  .info-section_2 h2 {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 5px;
+  }
+  .info-section_2 p {
+    margin: 20px;
   }
 
   /* Footer Section */
   .footer {
     background-color: #011827;
-
     color: white;
     padding: 40px 20px;
   }
@@ -410,6 +488,7 @@ width: auto;
     font-size: 1rem;
     font-weight:600;
     margin-bottom: 10px;
+    min-width: 100px;
 }
 
 .footer_list_social{
