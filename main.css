@@ -1,16 +1,4 @@
-#navigation {
-  background: transparent; 
-  border: none; 
-  padding: 20px; 
-  cursor: pointer; 
-  display: flex; 
-  height: 100px;
-  width: 100px;
-}
-
-
-
-/* General Styling */
+/* Global Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,6 +10,8 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
   color: #000000;
+  clear: both;
+
 }
 
 img {
@@ -29,6 +19,7 @@ img {
   height: auto;
 }
 
+/** ------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Header Section */
 .header {
   background-color: #011827;
@@ -46,10 +37,8 @@ img {
 }
 
 .header_logo-img {
-  min-width: auto;
   max-height: 80px;
   flex-shrink: 0;
-
 }
 
 .header_top-area_left-title {
@@ -59,29 +48,126 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: calc(100% - 60px);
-  margin-bottom: -30px;
 }
 
+/** ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Button Styles */
+.main_btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 220px;
+  height: 50px;
+}
 
+.online {
+  background-color: #e3170a;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: -115px;
+}
+
+.onsite {
+  background-color: #8acfe5;
+  color: #000;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 115px;
+}
+
+/** ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Footer Section */
+.footer {
+  background-color: #011827;
+  color: white;
+  padding: 40px 20px;
+  max-height: 500px;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.footer_about,
+.footer_site-map,
+.footer_social {
+  width: 30%;
+}
+
+.footer_title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.footer_text {
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.footer_list_contact,
+.footer_list_play,
+.footer_list_social {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.footer_item {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.footer_item_follow {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  min-width: 100px;
+}
+
+/** ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Desktop */
+
+/*popup menu*/
 @media (min-width: 768px) {
   .popup-container {
-    display: none; 
+    display: none;
   }
 
+  /*hamburger menu*/
   #navigation {
- display: none;
+    display: none;
   }
 
+  /*main img*/
   .main-image-img {
     width: 100%;
     height: auto;
     max-height: 450px;
     min-height: 300px;
     object-fit: cover;
-
   }
 
+  /*challenge*/
   .challenges {
+    clear: both;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
@@ -91,22 +177,105 @@ img {
     justify-content: center;
   }
 
+  .challenge-card {
+    box-shadow: 0 6px 8px rgba(2, 1, 26, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    max-width: 300px;
+    min-height: 400px;
+  }
 
   .challenge-image {
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
-
-  }
-
-  .challenge-image {
     max-width: 100%;
     margin-bottom: 0.5rem;
   }
 
-
   .popular {
+    clear: both;
     margin-top: 40px;
     margin-bottom: 50px;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .secondary-button {
+    background-color: #e3170a;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 140px;
+    margin-top: 50px;
+  }
+
+  .after_btns-item {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    border-radius: 2px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    gap: 1rem;
+    text-decoration: none;
+  }
+
+  .after_btn_onsite {
+    background-color: #8acfe5;
+    color: #000;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 230px;
+    height: 50px;
+    text-align: center;
+    margin-left: 240px;
+    align-items: center;
+
+  }
+
+  .after_btn_online {
+    background-color: #e3170a;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    width: 220px;
+    height: 50px;
+    text-align: center;
+    margin-right: 240px;
+    align-items: center;
+
+  }
+
+
+
+  /*reviews*/
+  .reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin: auto;
   }
 
   .review {
@@ -114,8 +283,16 @@ img {
     border: 1px solid #ffffff;
     padding: 1rem;
     border-radius: 8px;
-    width: 500px;
+    width: calc(25% - 2rem);
+    max-width: 500px;
+    min-width: 300px;
     display: flex;
+    align-items: center;
+    margin-top: 6%;
+    margin-bottom: 2%;
+    justify-content: flex-start;
+    box-sizing: border-box;
+
   }
 
   .review_text h5 {
@@ -131,14 +308,20 @@ img {
   }
 
   .review-avatar {
+    margin-top: -60px;
     width: 70px;
     height: 70px;
     border-radius: 50%;
     margin-right: 1rem;
+
   }
 
+  /*story*/
   .story {
     margin-top: 150px;
+    background-color: #011827;
+    color: #ffffff;
+    min-height: 600px;
   }
 
   .story_container {
@@ -150,27 +333,116 @@ img {
 
   .story_intro {
     color: #fff;
-    font-size: 1.55rem;
+    font-size: 1.9rem;
     margin-top: 100px;
     margin-bottom: 40px;
     font-weight: 100;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-left: 33%;
+    margin-right: 33%;
   }
 
-
-  .story {
-    margin-top: 150px;
+  .story_btn {
     background-color: #011827;
-    color: #ffffff;
-    min-height: 600px;
-  }
-
-  .story_container {
+    color: #8acfe5;
+    padding: 0.8rem 1.5rem;
+    outline: 2px solid #8acfe5;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
     text-align: center;
-
+    width: 400px;
   }
 
+  .story_description {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-left: 33%;
+    margin-right: 33%;
+  }
+
+  .story_intro h2 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
+  /*info section*/
+  /*info section*/
+  .info-section_1,
+  .info-section_2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: -4px;
+  }
+
+  .info-section_1_img,
+  .info-section_2_img {
+    flex: 1;
+    max-width: 50%;
+    margin: 0;
+  }
+
+  .info-section_1_text,
+  .info-section_2_text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .info-section_1_text h2,
+  .info-section_2_text h2,
+  .info-section_1_text p,
+  .info-section_2_text p {
+    width: 30%px;
+    margin-left: 16%;
+    margin-right: 16%;
+    margin-bottom: 30px;
+    margin-top: 25px;
+    font-size: 2.5rem
+  }
+
+  .book_on_site_today_button {
+    background-color: #e3170a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 16%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 1.4rem;
+    width: 250px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 60px;
+  }
+
+  .see_all_the_challenges_button {
+    background-color: #e3170a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 16%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 1.4rem;
+    width: 250px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 60px;
+  }
+
+  /*footer*/
   .footer {
     background-color: #011827;
     color: #fff;
@@ -226,6 +498,7 @@ img {
     align-items: left;
   }
 
+
   .footer_item_follow {
     font-size: 1rem;
     font-weight: 600;
@@ -240,61 +513,12 @@ img {
     font-weight: lighter;
   }
 
-  .story_intro h2 {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .info-section_1,
-  .info-section_2 {
-    display: flex;
-    align-items: center;
-    margin-bottom: -4px;
-  }
-
-  .info-section_1_img,
-  .info-section_2_img {
-    flex: 1;
-    max-width: 50%;
-    margin: 0;
-  }
-
-  .info-section_1_text,
-  .info-section_2_text {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .info-section_1_text h2,
-  .info-section_2_text h2,
-  .info-section_1_text p,
-  .info-section_2_text p {
-    width: 30%px;
-    margin-left: 16%;
-    margin-right: 16%;
-    margin-bottom: 30px;
-    margin-top: 25px;
-    font-size: 2.5rem
-  }
-
 }
 
-.info-image,
-.computer_karen {
-  width: 100%;
-  height: auto;
-  margin: 0;
-}
+/** ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* Mobile */
 
-/* Specific style to reverse the order for Section 2 */
-.info-section_2 {
-  flex-direction: row-reverse;
-}
-
-
-
+/*header*/
 @media (max-width: 768px) {
   .header {
     min-height: 110px;
@@ -316,250 +540,79 @@ img {
     min-height: 75px;
   }
 
-  .info-section_1_text,
-  .info-section_2_text {
-    margin: 20px;
-  }
-
-  .info-section_1_text h2,
-  .info-section_2_text h2 {
-    margin-bottom: 10px;
-  }
-
-}
-
-/* Main Section */
-.main {
-  width: 100%;
-  display: block;
-  overflow: visible;
-}
-
-/* Button styles */
-.main_btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  width: 220px;
-  height: 50px;
-
-}
-
-.online {
-  background-color: #e3170a;
-  color: #fff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 2px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  margin-left: -115px;
-}
-
-.onsite {
-  background-color: #8acfe5;
-  color: #000;
-  padding: 0.8rem 1.5rem;
-  border-radius: 2px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  margin-left: 115px;
-}
-
-.main_btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  width: 220px;
-  height: 50px;
-}
-
-.after_btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  width: 220px;
-  height: 50px;
-  margin-top: 80px;
-
-}
-
-@media (max-width: 768px) {
-  .online {
+  #navigation {
     background: transparent;
-    color: #9178fd;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
-    font-weight: bold;
     border: none;
+    padding: 20px;
     cursor: pointer;
-    margin-top: 105px;
-    font-size: 0.75rem;
-    margin-left: 0px;
-    text-decoration: underline;
+    display: flex;
+    height: 100px;
+    width: 100px;
   }
 
-  .onsite {
-    background-color: #8acfe5;
-    color: #000;
-    padding: 0.8rem 1.5rem;
-    border-radius: 3px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    margin-top: 50px;
-    font-size: 1.2rem;
-    text-decoration: none;
-    min-width: 260px;
-    ;
-    min-height: 55px;
-    margin-left: 0px;
-  }
-
-  .after_btn {
-    display: inline-flex;
+  /* Popup Section */
+  .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-sizing: border-box;
+    padding: 5%;
+  }
+
+  .popup-menu {
+    background-color: #011827;
+    color: #fff;
+    z-index: 1001;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .popup-menu ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .popup-menu ul li {
+    color: #ffffff;
+    font-size: 1.6rem;
+    margin: 4rem 0;
+    text-decoration: none;
+  
+  }
+
+  .popup-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .close-popup {
     position: absolute;
-    width: 220px;
-    height: 50px;
-  }
-
-  .see_all_the_challenges_button {
-    background-color: #e3170a;
-    color: #fff;
+    top: 3rem;
+    right: 3rem;
+    background: none;
     border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 3px;
-    cursor: pointer;
-    display: flex;
-    margin-left: 20px;
-    margin-bottom: 40px;
-    margin-top: 30px;
-    font-size: 0.95rem;
-    width: 100px;
-    text-align: center;
-    justify-content: center;
-  }
-
-
-  .book_on_site_today_button {
-    background-color: #e3170a;
     color: #fff;
-    border: none;
-    padding: 0.8rem 1.5rem;
-    border-radius: 3px;
+    font-size: 2rem;
+    z-index: 1002;
     cursor: pointer;
-    display: flex;
-    margin-left: 20px;
-    margin-bottom: 40px;
-    margin-top: 30px;
-    font-size: 0.5rem;
-    width: 100px;
-    text-align: center;
-    justify-content: center;
   }
 
-}
+  .hidden {
+    display: none;
+  }
 
-.story_btn {
-  display: inline-block;
-  padding: 16px 40px;
-  color: #74c6e5;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  border: 2px solid #74c6e5;
-  border-radius: 3px;
-  text-align: center;
-  cursor: pointer;
-  background: none;
-  margin-bottom: 60px;
-}
-
-.see_all_the_challenges_button {
-  background-color: #e3170a;
-  color: #fff;
-  border: none;
-  padding: 1.5rem 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  margin-left: 150px;
-  margin-bottom: 40px;
-  margin-top: 30px;
-  font-size: 2rem;
-  width: 420px;
-  text-align: center;
-  justify-content: center;
-}
-
-.secondary-button {
-  background-color: #e3170a;
-  color: #fff;
-  border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 3px;
-  cursor: pointer;
-  margin: 20px;
-  margin-left: 130px;
-}
-
-.secondary-button:hover {
-  background-color: #d00c00;
-
-}
-
-.book_on_site_today_button {
-  background-color: #e3170a;
-  color: #fff;
-  border: none;
-  padding: 1.5rem 1.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  display: flex;
-  margin-left: 150px;
-  margin-bottom: 40px;
-  margin-top: 30px;
-  font-size: 2rem;
-  width: 420px;
-  text-align: center;
-  justify-content: center;
-}
-
-/* Review Section */
-.reviews {
-  display: flex;
-  margin-top: 100px;
-  align-items: center;
-  justify-content: center;
-}
-
-.date {
-  font-size: 0.85rem;
-}
-
-@media (max-width: 768px) {
-
-  /* Individual Review */
+  /*reviews*/
   .review {
     background-color: #ffffff;
     border: 1px solid #ffffff;
@@ -601,81 +654,45 @@ img {
   }
 
 
-}
+  /*challenges*/
 
-/* popular chalenges text */
-.popular {
-  text-align: center;
-  font-size: 1.5rem;
-}
+  .popular {
+    clear: both;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 1.6rem;
+  }
 
-/* Challenge cards */
-.challenges {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  gap: 1rem;
-  padding: 1rem;
-  width: 100%;
-  border-radius: 6px;
-}
-
-
-.challenge-card {
-  background-color: #ffffff;
-  color: #000000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  text-align: start;
-  flex: 0 0 auto;
-  width: 280px;
-  border-radius: 6px;
-  font-weight: 200;
-}
-
-.challenge-card h5 {
-  float: right;
-  margin-top: -36px;
-  margin-right: 10px;
-  font-size: 0.7rem;
-}
-
-.challenge-card h3 {
-  margin-left: 20px;
-}
-
-.challenge-card p {
-  margin: 20px;
-}
-
-.stars {
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
-/* Horizontal layout for small screens */
-@media (max-width: 768px) {
+  /*challenge*/
   .challenges {
+    clear: both;
     display: flex;
     flex-direction: row;
     overflow-x: auto;
     gap: 1rem;
     padding: 1rem;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .challenge-card {
+    box-shadow: 0 6px 8px rgba(2, 1, 26, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 90%px;
+    min-height: 400px;
   }
 
   .challenge-image {
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
-
-  }
-
-  .challenge-image {
     max-width: 100%;
     margin-bottom: 0.5rem;
   }
 
 
-  /* Story Section */
+  /*story*/
   .story {
     margin-top: 150px;
   }
@@ -699,140 +716,143 @@ img {
     font-size: 1.2rem;
   }
 
-}
+  /*buttons*/
+  .onsite {
+    background-color: #8acfe5;
+    color: #000000;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 225px;
+    margin-top: 40px;
+    height: 45px;
 
-/* Footer Section */
-.footer {
-  background-color: #011827;
-  color: white;
-  padding: 40px 20px;
-  max-height: 500px;
-}
+  }
 
-.footer_content {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1rem;
-}
-
-.footer_about,
-.footer_site-map,
-.footer_social {
-  width: 30%;
-}
-
-.footer_title {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  margin-top: 15px;
-}
-
-.footer_text {
-  font-size: 1rem;
-  margin-bottom: 40px;
-}
-
-
-.footer_list_contact {
-list-style: none;
-padding: 0;
-font-size: 1rem;
-font-weight: lighter;
-margin-bottom: 20px;
-}
-
-.footer_item_site_map {
-font-size: 1rem;
-font-weight: 600;
-margin-bottom: 10px;
-}
-
-.footer_list_play {
-list-style: none;
-padding: 0;
-font-size: 1rem;
-font-weight: lighter;
-margin-bottom: 40px;
-}
-
-.footer_item {
-font-size: 1rem;
-margin-bottom: 5px;
-}
-
-.footer_content {
-flex-direction: row;
-align-items: left;
-}
-
-.footer_item_follow {
-font-size: 1rem;
-font-weight: 600;
-margin-bottom: 10px;
-min-width: 100px;
-}
-
-.footer_list_social {
-list-style: none;
-padding: 0;
-font-size: 1rem;
-font-weight: lighter;
+  .online {
+    background: transparent;
+    color: #9178fd;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 90px;
+    font-size: 0.75rem;
+    margin-left: 0px;
+    text-decoration: underline;
+  }
 
 
-}
 
-/*----------------------------------------------------------------------------------------------------------------------------*/
-.popup-container {
-  display: none;
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5); 
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: 1000; 
+  .after_btn_onsite {
+    background-color: #8acfe5;
+    color: #000000;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 225px;
+    margin-top: 40px;
+    height: 45px;
 
-}
+  }
 
-.popup-menu {
-  display: none;
-  background-color: #011827;
-  color: #fff;
-  z-index: 1001; 
-  width: 90%;
-  height: 90%;
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-  
-}
+  .after_btn_online {
+    background: transparent;
+    color: #9178fd;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.75rem;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  font-weight: bolder;
-  font-size: 2.6rem;
-}
+  .see_all_the_challenges_button {
+    background-color: #e3170a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    font-size: 0.95rem;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+  }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.popup-menu ul li {
-  margin: 4rem; 
-}
 
-.close-popup {
-  position: absolute;
-  top: 10%;
-  right: 15%;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  z-index: 1002;
+  .book_on_site_today_button {
+    background-color: #e3170a;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    font-size: 0.5rem;
+    width: 100px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .secondary-button {
+    background-color: #e3170a;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 2px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 100px;
+    margin-right: 10px;
+    margin-top: 50px;
+    max-width: 150px;
+    box-sizing: border-box;
+    margin-right: 50px;
+  }
+
+  /*info section*/
+  .info-section_1_text,
+  .info-section_2_text {
+    margin: 20px;
+  }
+
+  .info-section_1_text h2,
+  .info-section_2_text h2 {
+    margin-bottom: 10px;
+  }
+
+  /*footer*/
+  .footer_content {
+    flex-direction: column;
+    text-align: center;
+  }
 }
